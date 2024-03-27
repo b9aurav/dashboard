@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { DashboardMenu, PagesMenu } from "../constant/Menu";
 import Image from "next/image";
 import SidebarItem from "./SidebarItem";
@@ -7,28 +7,21 @@ import TuneIcon from "@mui/icons-material/Tune";
 import LogoutIcon from "@mui/icons-material/Logout";
 import LanguageIcon from "@mui/icons-material/Language";
 import { Drawer, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 
-type Props = {};
+type Props = {
+    open: boolean;
+    setOpen: (value: boolean) => void;
+};
 
 const Sidebar = (props: Props) => {
-  const [open, setOpen] = React.useState(false);
   return (
-    <div>
+    <div className="border border-r-gray-300 bg-white">
       {/* For Mobile Device */}
-      <IconButton
-        className="md:hidden"
-        onClick={() => setOpen(true)}
-        aria-label="Sidebar"
-      >
-        <MenuIcon />
-      </IconButton>
-
       <Drawer
         className="md:hidden overflow-hidden"
-        open={open}
-        onClose={() => setOpen(false)}
+        open={props.open}
+        onClose={() => props.setOpen(false)}
       >
         <Box sx={{ width: 256 }} role="presentation">
           <div className="w-64 h-screen p-4 bg-white flex flex-col relative">
