@@ -16,7 +16,7 @@ const SidebarItem = (props: Props) => {
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="my-2">
       <a
         onClick={handleToggle}
         className="flex items-center w-full relative p-2 rounded-md text-gray-700 hover:bg-gray-200 cursor-pointer"
@@ -38,7 +38,7 @@ const SidebarItem = (props: Props) => {
         <div className="ml-4">
           {props.children.map((child, index) => (
             <a
-              className="block p-2 ml-6 rounded-md text-gray-700 hover:bg-gray-300"
+              className="block p-2 ml-6 rounded-md text-gray-700 hover:bg-gray-300 my-2"
               key={index}
               href={child.href}
             >
