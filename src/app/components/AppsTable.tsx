@@ -31,6 +31,7 @@ const AppsTable = (props: Props) => {
             </TableRow>
           </TableHead>
           <TableBody>
+            {/* Slicing the data to show only 5 rows per page */}
             {TableData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
               <TableRow key={index}>
                 <TableCell>

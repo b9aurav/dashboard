@@ -34,6 +34,7 @@ const Sidebar = (props: Props) => {
             />
             <div className=" overflow-scroll max-h-[85vh]">
               <text className="text-[grey] m-4">D A S H B O A R D</text>
+              {/* Fetching menu items from the constant file: constant/Menu.tsx */}
               {DashboardMenu.map((item, index) => (
                 <SidebarItem key={index} {...item} />
               ))}

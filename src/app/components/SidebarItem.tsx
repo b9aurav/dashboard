@@ -34,6 +34,8 @@ const SidebarItem = (props: Props) => {
           </div>
         )}
       </a>
+      
+      {/* Render when isOpen is true and submenu available */}
       {isOpen && props.children && (
         <div className="ml-4">
           {props.children.map((child, index) => (

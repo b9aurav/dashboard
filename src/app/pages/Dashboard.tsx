@@ -13,6 +13,7 @@ const Dashboard = (props: Props) => {
     <div>
       <Banner />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 m-4">
+        {/* Fetching card data from the constant file: constant/CardData.tsx */}
         {CardData.map((card, index) => (
           <Cards key={index} {...card} />
         ))}
