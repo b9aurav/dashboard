@@ -13,7 +13,7 @@ type Props = {
 
 const Navbar = (props: Props) => {
   return (
-    <div className="relative">
+    <div className="relative border">
       {/* For Desktop Devices */}
       <div className="bg-white p-4 space-x-2 hidden md:flex">
         <div className=" border border-gray-400 p-2 rounded-md w-full flex space-x-2">
