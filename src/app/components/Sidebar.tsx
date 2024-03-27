@@ -10,8 +10,8 @@ import { Drawer, IconButton } from "@mui/material";
 import Box from "@mui/material/Box";
 
 type Props = {
-    open: boolean;
-    setOpen: (value: boolean) => void;
+  open: boolean;
+  setOpen: (value: boolean) => void;
 };
 
 const Sidebar = (props: Props) => {
@@ -61,40 +61,42 @@ const Sidebar = (props: Props) => {
       </Drawer>
 
       {/* For Desktop Device */}
-      <div className="w-64 h-screen p-4 bg-white flex-col relative hidden md:flex">
-        <Image
-          src="/logo.svg"
-          alt="logo"
-          width={100}
-          height={100}
-          className="mb-8"
-        />
-        <div className=" overflow-auto scroll-auto max-h-[85vh]">
-          <text className="text-[grey] m-4">D A S H B O A R D</text>
-          <div className="my-4">
-            {DashboardMenu.map((item, index) => (
-              <SidebarItem key={index} {...item} />
-            ))}
+      <div className="fixed w-64 h-screen">
+        <div className="w-64 h-screen p-4 bg-white flex-col relative hidden md:flex">
+          <Image
+            src="/logo.svg"
+            alt="logo"
+            width={100}
+            height={100}
+            className="mb-8"
+          />
+          <div className=" overflow-auto scroll-auto max-h-[85vh]">
+            <text className="text-[grey] m-4">D A S H B O A R D</text>
+            <div className="my-4">
+              {DashboardMenu.map((item, index) => (
+                <SidebarItem key={index} {...item} />
+              ))}
+            </div>
+            <text className="text-[grey] m-4">P A G E S</text>
+            <div className="my-4">
+              {PagesMenu.map((item, index) => (
+                <SidebarItem key={index} {...item} />
+              ))}
+            </div>
           </div>
-          <text className="text-[grey] m-4">P A G E S</text>
-          <div className="my-4">
-            {PagesMenu.map((item, index) => (
-              <SidebarItem key={index} {...item} />
-            ))}
-          </div>
-        </div>
-        <div className="absolute bottom-2 w-full pr-10">
-          <div className="border-t border-gray-300 w-full absolute top-0 mb-2 right-4"></div>
-          <div className="flex justify-between mt-2">
-            <IconButton aria-label="Settings">
-              <TuneIcon />
-            </IconButton>
-            <IconButton aria-label="Logout">
-              <LogoutIcon />
-            </IconButton>
-            <IconButton aria-label="Language">
-              <LanguageIcon />
-            </IconButton>
+          <div className="absolute bottom-2 w-full pr-10">
+            <div className="border-t border-gray-300 w-full absolute top-0 mb-2 right-4"></div>
+            <div className="flex justify-between mt-2">
+              <IconButton aria-label="Settings">
+                <TuneIcon />
+              </IconButton>
+              <IconButton aria-label="Logout">
+                <LogoutIcon />
+              </IconButton>
+              <IconButton aria-label="Language">
+                <LanguageIcon />
+              </IconButton>
+            </div>
           </div>
         </div>
       </div>

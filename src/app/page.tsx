@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="bg-[#f2f4f7] flex">
       <Sidebar open={openSidebar} setOpen={setOpenSidebar} />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full md:ml-64">
         <Navbar setOpen={setOpenSidebar} />
         <Dashboard />
       </div>
