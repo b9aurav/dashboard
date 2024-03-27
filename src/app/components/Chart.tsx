@@ -4,12 +4,14 @@ import React, { useEffect, useState } from "react";
 type Props = {};
 
 const Chart = (props: Props) => {
-  const [chartWidth, setChartWidth] = useState(window.innerWidth);
-
+  const [chartWidth, setChartWidth] = useState(0);
+  
   useEffect(() => {
     // Update the chart width when the window is resized
     const handleResize = () => setChartWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
+
+    setChartWidth(window.innerWidth);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
