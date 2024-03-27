@@ -40,13 +40,13 @@ const AppsTable = (props: Props) => {
                 <TableCell>{row.Amount}</TableCell>
                 <TableCell>
                   {row.Status === "Active" && (
-                    <Chip color="success">{row.Status}%</Chip>
+                    <Chip color="success">{row.Status}</Chip>
                   )}
                   {row.Status === "Pending" && (
-                    <Chip color="warning">{row.Status}%</Chip>
+                    <Chip color="warning">{row.Status}</Chip>
                   )}
                   {row.Status === "Cancelled" && (
-                    <Chip color="neutral">{row.Status}%</Chip>
+                    <Chip color="neutral">{row.Status}</Chip>
                   )}
                 </TableCell>
                 <TableCell>{row.UserId}</TableCell>
